@@ -31,9 +31,8 @@ rollButton.onclick = function () {
 
 //Version 1
 function updateClass(value) {
-  document.getElementById(value + '-die').className = ('dice-' + random(1,6).toString());
+  document.getElementById(value + '-die').className = ('dice-' + random(1,6));
 }
-
 
 // Version 2
 function diceRoll() {
