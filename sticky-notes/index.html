@@ -9,8 +9,9 @@
     }
     .container {
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-start;;
       flex-wrap: wrap;
+      padding: 0 1%;
     }
     .box {
       padding: 1em;
@@ -19,16 +20,65 @@
       margin: 2px;
       text-align: center;
       font-size: 2em;
-      line-height: 2em;
+      line-height: 1.25;
       font-weight: bold;
     }
+
+    .form-wrapper {
+      background-color: #fafafa;
+      border-bottom: 1px solid #E8E8E8;
+      padding: 20px 16px;
+      margin-bottom: 1%;
+    }
+
+    #add-sticky {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    label {
+      font-family: sans-serif;
+    }
+
+    select, input {
+      flex: 1;
+      margin-right: 16px;
+      font-size: 1rem;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .dropdown select {
+      background-color: #FFF;
+      font-size: inherit;
+      text-overflow: '';
+    }
+
+
   </style>
 
 </head>
 <body>
 
-
-  <div class="container"></div>
+  <div class="form-wrapper">
+    <form id="add-sticky" method="post">
+      <!-- <select name="colour"></select> -->
+      <div class="dropdown">
+        <select name="colour" class="dropdown-select">
+        </select>
+      </div>
+      <!-- <input type="text" name="colour" value="" placeholder="Choose a sticky note colour" autofocus="true"> -->
+      <input type="text" name="message" value="" placeholder="Enter your sticky note">
+      <input type="submit" name="submit" value="Add sticky note" class="btn">
+    </form>
+  </div>
+  <div class="container sticky-wrapper">
+  </div>
   <!-- js -->
   <script src="app.js"></script>
 </body>
